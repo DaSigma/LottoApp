@@ -1,72 +1,80 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  ImageBackground,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import Lotto from "../../components/Lottos";
+import { BoxShadow } from "react-native-shadow";
+import { styled } from "nativewind";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Games from "../../components/Games";
+const StyledView = styled(View);
+const StyledText = styled(Text);
 
 export default function HomeScreen({ navigation }) {
-   
-   const [num1, setNum1] = React.useState('')
+  const [num1, setNum1] = React.useState("");
+  const bg_img = require("../../assets/lotto-online-1.png");
 
+  const shadowOpt = {
+    width: 40,
+    height: 40,
+    color: "#000",
+    border: 2,
+    borderRadius: 20,
+    radius: 5,
+    opacity: 0.5,
+    x: 0,
+    y: 0.1,
+    style: { marginVertical: 4 },
+  };
 
   return (
-
-    <View style={[styles.container]}>
-      <View style={styles.lotto}>
-        <Text style={styles.circle}>{num1}</Text>
-        <Text style={styles.circle}>14</Text>
-        <Text style={styles.circle}>36</Text>
-        <Text style={styles.circle}>5</Text>
-        <Text style={styles.circle}>9</Text>
-      </View>
-      <View style={[styles.container]}>
-        <View style={[styles.circleLabel]}>
-          <Text
-            style={{
-              color: "black",
-              fontWeight: "500",
-              textAlign: "center",
-              flex: 1,
-            }}
-          >
-          </Text>
-          <Text
-            style={{ color: "black", fontWeight: "500", textAlign: "center" }}
-          >
-            15
-          </Text>
-        </View>
-        <View style={styles.container}>
-          <Button title="generate" style={styles.button}>
-            Generate
-          </Button>
-        </View>
-      </View>
-    </View>
+   <Games/>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
-  lotto: {
+  gameContainer: {},
+  sectionHeader: {
     flexDirection: "row",
-    height: 120,
-    padding: 12,
+    justifyContent: "space-between",
+  },
+  background: {
+    flex: 1,
+    backgroundColor: "red",
+  },
+  image: {
+    opacity: 0.2,
+  },
+  numberSection: {
+    flexDirection: "row",
+    height: 80,
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "white",
+    borderRadius: 40,
+    marginLeft: 25,
+    marginRight: 25,
   },
   button: {
     justifyContent: "center",
     borderRadius: 50,
-    backgroundColor: "green",
+    //  backgroundColor: "green",
   },
 
-  circleLabel: {
+  gameSection: {
     flexDirection: "row",
     padding: 8,
-    backgroundColor: "green",
-    marginTop: 28,
-    height: 120,
+    //  backgroundColor: "green",
+    height: 320,
   },
   row: {
     flexDirection: "row",
@@ -74,12 +82,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   circle: {
-     flex: 1,
-     backgroundColor: "grey",
-     margin: 10,
-     borderRadius: 50,
-     textAlign: "center",
-     textAlignVertical: "center",
-     height: 40,
+    flex: 1,
+    backgroundColor: "red",
+    margin: 10,
+    borderRadius: 50,
+    textAlign: "center",
+    textAlignVertical: "center",
+    color: "white",
+    height: 40,
+  },
+  buttonSection: {
+    flexDirection: "row",
+    height: 120,
+    justifyContent: "center",
+    alignItems: "center",
+    //  backgroundColor: "grey",
   },
 });

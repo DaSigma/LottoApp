@@ -1,0 +1,64 @@
+{
+   "games" :
+[
+   {
+      "id" : 0,
+      "name" : "Lotto",
+      "balls" : 6,
+      "max_ball" : 45,
+      "extra_ball" : false,
+      "color": "bg-red-600"
+   },
+   {
+      "id" : 1,
+      "name" : "Mega Millions",
+      "balls" : 5,
+      "max_ball" : 70,
+      "extra_ball" : true,
+      "color": "bg-blue-600",
+      "max_extra_ball" : 30
+   },
+      {
+      "id" : 2,
+      "name" : "Power ball",
+      "balls" : 5,
+      "max_ball" : 70,
+      "extra_ball" : true,
+      "color": "bg-purple-800",
+       "max_extra_ball" : 30
+   },
+      {
+      "id" : 3,
+      "name" : "Easy 5",
+      "balls" : 5,
+      "max_ball" : 40,
+      "color": "bg-orange-700",
+      "extra_ball" : false
+   },
+      {
+      "id" : 4,
+      "name" : "Pick 5",
+      "balls" : 5,
+      "max_ball" : 9,
+      "color": "bg-green-500",
+      "extra_ball" : false
+   },
+      {
+      "id" : 5,
+      "name" : "Pick 4",
+      "balls" : 4,
+      "max_ball" : 9,
+      "color": "bg-yellow-400",
+      "extra_ball" : false
+   },
+      {
+      "id" : 6,
+      "name" : "Pick 3",
+      "balls" : 3,
+      "max_ball" : 9,
+      "color": "bg-gray-500",
+      "extra_ball" : false
+   }
+]
+
+}

@@ -2,18 +2,12 @@ import * as React from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import MainContainer from './navigation/MainContainer';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <MainContainer></MainContainer>
-    </View>
+    <SafeAreaView className="flex-1">
+      <MainContainer ></MainContainer>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});

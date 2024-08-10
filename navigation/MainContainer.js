@@ -49,10 +49,10 @@ export default function MainContainer() {
               );
             },
             headerStyle: {
-              backgroundColor: "blue",
-              height: 150,
+              backgroundColor: "white",
+              height: 50,
             },
-            headerTintColor: "white",
+            headerTintColor: "black",
             label: false,
             tabBarStyle: {
               position: "absolute",
